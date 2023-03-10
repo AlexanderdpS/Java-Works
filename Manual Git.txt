@@ -1,0 +1,70 @@
+**********************	Configurando Git por primera vez
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+
+
+**********************	CERRAR SESION
+git config --global --unset user.name
+git config --global --unset user.email
+
+*********************	 Comprobar
+
+1) The `git config` command
+Here’s the git config command to show your Git username:
+
+git config user.name
+which in my case returns:
+
+Alvin Alexander
+
+2) The `git config --list` command
+Another way to show your Git username is with this git config command:
+
+git config --list
+which returns this output:
+
+user.name=Alvin Alexander
+user.email=[omitted]
+merge.tool=vimdiff
+
+*****************	AÑADIR CAMBIOS A REPOSITORIO GitHub
+	En gitBush
+0. Seleccionamos donde queremos descargar el proyecto-carpeta
+1. git clone https://github.com/AlexanderdpS/....
+2. cd (nos ubicamos )
+3. git add . "para añadir todos los nuevos cambios"
+4. git commit -m "Comentario a ...."
+5. git push "para enviar al repositorio todos los cambios
+
+************************	Eliminar repositorio Git creado con git init
+
+Debemos ingresar al git bash
+
+		cd carpeta/
+		rm -rf .git
+
+***********************	ACTUALIZAR REPOSITORIO Git
+- Verificar si hay cambios en el repositorio de la nube GitHub:
+		git fetch
+
+
+- Descargar conformen los últimos cambios subidos en la nube GitHub:
+		git pull
+
+
+Puntos Importantes
+1.- git clone (dirección de repositorio) ~ "clona el repo localmente"
+
+1.5 cd ....		~ "Me ubico en el directorio para subir y actualizar"
+
+2.- git status ~ "indica que archivos han cambiado"
+3.- git add (nombre de archivo) ~ "añadir archivo"
+4.- git diff ~ "mostrara las diferencias que hay en el archivo"
+5.- git add . ~ "añade todos los archivos que han tenido cambios"
+6.- git commit -m ~ "git commit guardará todos los cambio hechos en la zona de montaje o área de preparación (staging area), junto con una breve descripción del usuario, en un "commit" al repositorio local. (el -m agrega comentarios)"
+7.- git push ~ sube todo al repo en GitHub
+
+
+
