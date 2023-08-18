@@ -1,60 +1,60 @@
-**********************	Configurando Git por primera vez
+**********************	VERIFICAR CUENTAS GIT EN WINDOWS
 
-$ git config --global user.name "John Doe"
-$ git config --global user.email johndoe@example.com
+1. Credenciales de Windows
+2. Borrar historial Navegador-> Google, Edge
+3. GitBash-> git config --list
+4. Eliminar archivo C:\Users\"Tu cuenta nombre"\ -> .gitconfig
+
+*********************	CONFIGURANDO GIT POR PRIMERA VEZ
+
+git config --global user.name "John Doe"
+git config --global user.email "johndoe@example.com"
 
 
+*********************	CERRAR SESION EN GITBASH
 
-**********************	CERRAR SESION
 git config --global --unset user.name
 git config --global --unset user.email
 
-*********************	 Comprobar
+*********************	ELIMINAR MAIN O MASTER:
 
-1) The `git config` command
-Here’s the git config command to show your Git username:
-
-git config user.name
-which in my case returns:
-
-Alvin Alexander
-
-2) The `git config --list` command
-Another way to show your Git username is with this git config command:
-
-git config --list
-which returns this output:
-
-user.name=Alvin Alexander
-user.email=[omitted]
-merge.tool=vimdiff
-
-*****************	AÑADIR CAMBIOS A REPOSITORIO GitHub
-	En gitBush
-0. Seleccionamos donde queremos descargar el proyecto-carpeta
-1. git clone https://github.com/AlexanderdpS/....
-2. cd (nos ubicamos )
-3. git add . "para añadir todos los nuevos cambios"
-4. git commit -m "Comentario a ...."
-5. git push "para enviar al repositorio todos los cambios
-
-************************	Eliminar repositorio Git creado con git init
-
-Debemos ingresar al git bash
-
-		cd carpeta/
+Por GitBash, 
+1.	Buscamos el Main o Master
+2.	Ejecutamos el comando:
+		
 		rm -rf .git
 
-***********************	ACTUALIZAR REPOSITORIO Git
-- Verificar si hay cambios en el repositorio de la nube GitHub:
+*********************	COMPROBAR CUENTA EN GITBASH
+
+	git config --list
+
+*********************	ACTUALIZAR REPOSITORIO GITHUB
+
+	1. git add .
+	2. git commit -m "tu comentario"
+	3. git push
+
+*********************	AÑADIR CAMBIOS A REPOSITORIO GITHUB DESDE OTRA PC
+
+0	Primero iniciamos sesión en Git por GitBash
+1	Seleccionamos donde queremos descargar el Repositorio de GitHub
+2	git clone https://github.com/AlexanderdpS/[nombre repositorio]
+3. 	cd (nos ubicamos )
+4. 	git add . 		->"para añadir todos los nuevos cambios"
+5. 	git commit -m 		->"Comentario a ...."
+6. 	git push 		->"para enviar al repositorio todos los cambios
+
+
+*********************	ACTUALIZAR REPOSITORIO LOCAL POR GITBASH
+
+	Verificar si hay cambios en el repositorio de la nube GitHub:
 		git fetch
 
-
-- Descargar conformen los últimos cambios subidos en la nube GitHub:
+	Descargar conformen los últimos cambios subidos en la nube GitHub:
 		git pull
 
 
-Puntos Importantes
+*********************	Puntos Importantes
 1.- git clone (dirección de repositorio) ~ "clona el repo localmente"
 
 1.5 cd ....		~ "Me ubico en el directorio para subir y actualizar"
