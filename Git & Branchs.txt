@@ -1,0 +1,39 @@
+		crear una rama
+Se va a ubicar en la rama recién creada.
+	git checkout -b [nombre de la rama]
+
+Realizar cambios y guardar
+	git add .
+	git commit -m "Comentario"
+
+Subir el cambio al repositorio remoto
+	git push origin [nombre de la rama]
+*Para subirlo normalmente es a la rama main
+	
+	sino deja, talvez la rama principal se actualizo por otro, entonces:
+	git pull origin [nombre de la rama]
+
+
+Cambiar de rama
+	git checkout [nombre de la rama]
+
+* Notaras que el repositorio local hace aparecer y desaparecer cuando cambias de rama en rama
+
+
+-----------------------------------------------
+		UNIR RAMAS
+1. Cambiar a la rama de destino, ejemplo a la rama principal
+	git checkout main
+
+2. Realizar la fusión, una vez en la rama destino, por ejemplo se va unir [ramita] a main
+	git merge [ramita]
+
+*Git intentará fusionar automáticamente, si no es así te pedirá que resuelvas los conflictos manualmente.
+
+3. Confirmar la fusión, utilizando el comando 	git commit
+
+4. Subir los cambios fusionados, si deseas lo puedes subir con:
+	git push
+
+
+
